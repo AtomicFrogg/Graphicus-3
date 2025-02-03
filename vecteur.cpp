@@ -1,25 +1,25 @@
 #include "vecteur.h"
 
-Vecteur::Vecteur(){
+Vecteur<T>::Vecteur(){
 	this->capacite = 1;
 	this->taille = 0;
 	this->elements = new Couche*[this->capacite];
 }
 
 
-Vecteur::~Vecteur(){
+Vecteur<T>::~Vecteur(){
 		delete [] this->elements;
 }
 
-int Vecteur::getCapacite(){
+int Vecteur<T>::getCapacite(){
 	return this->capacite;
 }
 
-int Vecteur::getTaille(){
+int Vecteur<T>::getTaille(){
 	return this->taille;
 }
 
-void Vecteur::doublerCapacite(){
+void Vecteur<T>::doublerCapacite(){
 	this->capacite = this->capacite * 2;
 	Couche* *elements2;
 	elements2 = new Couche*[this->capacite];
@@ -31,7 +31,7 @@ void Vecteur::doublerCapacite(){
 	this->elements = elements2;	
 }
 
-void Vecteur::viderVecteur(){
+void Vecteur<T>::viderVecteur(){
 	//Supprimer l'ancien tableau pour en créer un nouveau vide
 	delete [] this->elements;
 	this->elements = new Couche*[this->capacite];
@@ -39,13 +39,13 @@ void Vecteur::viderVecteur(){
 }
 
 
-bool Vecteur::estVide(){
+bool Vecteur<T>::estVide(){
 	return this->taille == 0;
 
 }
 
 
-bool Vecteur::ajouterElement(Couche *element){
+bool Vecteur<T>::ajouterElement(T element){
 	//Vérifier si plein
 	if(this->taille >= this->capacite){
 		this->doublerCapacite();
@@ -71,7 +71,7 @@ void Vecteur::afficher(ostream &s){
 }
 */
 
-void Vecteur::afficher(ostream &s){
+void Vecteur<T>::afficher(ostream &s){
 	if(this->taille == 0){
 		s << "Vecteur vide" << endl;
 	}
@@ -86,7 +86,7 @@ void Vecteur::afficher(ostream &s){
 }
 
 
-Couche* Vecteur::retirerElement(int index){
+T Vecteur<T>::retirerElement(int index){
 	if(index < this->taille and index >= 0){
 		Couche* elementRetire = this->elements[index];
 		//Tasser tous ceux après
@@ -102,7 +102,7 @@ Couche* Vecteur::retirerElement(int index){
 }
 
 
-Couche* Vecteur::getElement(int index){
+T Vecteur<T>::getElement(int index){
 	
 	if(index < this->taille and index >= 0){
 		return this->elements[index];

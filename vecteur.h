@@ -5,7 +5,7 @@
 #include "couche.h"
 
 using namespace std;
-
+template  <typename T>
 class Vecteur{
 
 public :
@@ -16,16 +16,16 @@ public :
 	void doublerCapacite();
 	void viderVecteur();
 	bool estVide();
-	bool ajouterElement(Couche *objet);
+	bool ajouterElement(T objet);
 	void afficher(ostream &s);
-	Couche* retirerElement(int index);
-	Couche* getElement(int index);
+	T retirerElement(int index);
+	T getElement(int index);
 	
 
 private:
 	int capacite;
 	int taille;
-	Couche* *elements;
+	T *elements;
 };
 
 

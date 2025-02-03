@@ -13,7 +13,7 @@
 
 Canevas::Canevas()
 {
-	this->vecteur = *new Vecteur();
+	this->vecteur = *new Vecteur<Couche*>();
 	this->coucheActive = nullptr;
 }
 
