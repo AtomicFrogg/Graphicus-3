@@ -17,7 +17,7 @@ Couche::Couche()
 	//this->formes = new Forme*[MAX_FORMES];
 	this->formes = *new Vecteur<Forme*>();
 	this->etat = INITIALISE;
-	this->taille = 0;
+	//this->taille = 0;
 }
 
 Couche::~Couche()
@@ -59,9 +59,11 @@ bool Couche::reinitialiserCouche()
 double Couche::aireTotale()
 {
 	double aire = 0;
-	for(int i = 0; i<taille;i++)
+	Forme* ptr = nullptr;
+	for(int i = 0; i<formes.getTaille()/*taille*/;i++)
 	{
-		aire = aire + formes[i]->aire();
+		ptr = formes.getElement(i);
+		aire = aire + ptr->aire();
 	}
 	return aire;
 }
@@ -82,7 +84,7 @@ Forme* Couche::retirerForme(int index)
 {
 	if(index >= 0 && index < formes.getTaille()/*taille*/)
 	{
-		formes.retirerElement(index)
+		Forme* ptr = formes.retirerElement(index);
 		/*Forme* ptr = formes[index];
 		for(int i = index; i< taille - 1; i++)
 		{
@@ -99,7 +101,7 @@ Forme* Couche::retirerForme(int index)
 
 Forme* Couche::getForme(int index)
 {
-	if(index >= 0 && index < formes.getTaille/*taille*/)
+	if(index >= 0 && index < formes.getTaille()/*taille*/)
 	{
 		return formes.getElement(index)/*formes[index]*/;
 	}
@@ -114,7 +116,7 @@ bool Couche::translaterCouche(int deltaX, int deltaY)
 	if(deltaX != 0 && deltaY != 0)
 	{
 		Forme* it = nullptr;
-		for(int i = 0; i < taille; i++)
+		for(int i = 0; i < formes.getTaille()/*taille*/; i++)
 		{
 			/*formes[i]->translater(deltaX, deltaY);*/
 			it = formes.getElement(i);
@@ -143,7 +145,7 @@ void Couche::afficher(ostream &s)
 	{
 		s<< "INACTIVE"<<endl;
 	}
-	if(taille > 0)
+	if(formes.getTaille() > 0)
 	{
 		/*for (int i = 0; i < taille; i++)
 		{
@@ -151,7 +153,7 @@ void Couche::afficher(ostream &s)
 		}*/
 		formes.afficher(s);
 	}
-	else if(taille == 0)
+	else if(formes.getTaille() == 0)
 	{
 		s << "Couche = vide" << endl;
 	}
