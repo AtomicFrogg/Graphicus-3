@@ -1,12 +1,143 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\willi\\Desktop\\Graphicus-3\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\willi\\Desktop\\Graphicus-3\\couche.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:couche.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\willi\\Desktop\\Graphicus-3\\vecteur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:vecteur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\willi\\Desktop\\Graphicus-3\\couche.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:couche.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\willi\\Desktop\\Graphicus-3\\vecteur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:vecteur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\willi\\Desktop\\Graphicus-3\\canevas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:canevas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\willi\\Desktop\\Graphicus-3\\canevas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:canevas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "couche.h",
+              "DocumentMoniker": "C:\\Users\\willi\\Desktop\\Graphicus-3\\couche.h",
+              "RelativeDocumentMoniker": "couche.h",
+              "ToolTip": "C:\\Users\\willi\\Desktop\\Graphicus-3\\couche.h",
+              "RelativeToolTip": "couche.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-03T18:56:49.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "couche.cpp",
+              "DocumentMoniker": "C:\\Users\\willi\\Desktop\\Graphicus-3\\couche.cpp",
+              "RelativeDocumentMoniker": "couche.cpp",
+              "ToolTip": "C:\\Users\\willi\\Desktop\\Graphicus-3\\couche.cpp",
+              "RelativeToolTip": "couche.cpp",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAJcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-03T18:56:45.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "canevas.h",
+              "DocumentMoniker": "C:\\Users\\willi\\Desktop\\Graphicus-3\\canevas.h",
+              "RelativeDocumentMoniker": "canevas.h",
+              "ToolTip": "C:\\Users\\willi\\Desktop\\Graphicus-3\\canevas.h",
+              "RelativeToolTip": "canevas.h",
+              "ViewState": "AgIAACYAAAAANOHPhD8wwCwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-03T18:54:20.417Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "8533d4ce-90c6-47c3-b0ca-404da672afbd",
+        "Display": 0,
+        "X": 856,
+        "Y": 230,
+        "Width": 1907,
+        "Height": 784,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "canevas.cpp",
+              "DocumentMoniker": "C:\\Users\\willi\\Desktop\\Graphicus-3\\canevas.cpp",
+              "RelativeDocumentMoniker": "canevas.cpp",
+              "ToolTip": "C:\\Users\\willi\\Desktop\\Graphicus-3\\canevas.cpp",
+              "RelativeToolTip": "canevas.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-03T18:54:08.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "vecteur.cpp",
+              "DocumentMoniker": "C:\\Users\\willi\\Desktop\\Graphicus-3\\vecteur.cpp",
+              "RelativeDocumentMoniker": "vecteur.cpp",
+              "ToolTip": "C:\\Users\\willi\\Desktop\\Graphicus-3\\vecteur.cpp",
+              "RelativeToolTip": "vecteur.cpp",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-03T19:05:48.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "vecteur.h",
+              "DocumentMoniker": "C:\\Users\\willi\\Desktop\\Graphicus-3\\vecteur.h",
+              "RelativeDocumentMoniker": "vecteur.h",
+              "ToolTip": "C:\\Users\\willi\\Desktop\\Graphicus-3\\vecteur.h",
+              "RelativeToolTip": "vecteur.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-03T19:04:07.136Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
