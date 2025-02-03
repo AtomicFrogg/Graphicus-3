@@ -26,7 +26,7 @@ Couche::~Couche()
 
 void Couche::setEtat(int nouvelEtat)
 {
-	if(nouvelEtat >= 0 and nouvelEtat <=2){
+	if(nouvelEtat >= 0 && nouvelEtat <=2){
 		this->etat = nouvelEtat;
 	}
 	
@@ -77,7 +77,7 @@ bool Couche::ajouterForme(Forme* ptr)
 
 Forme* Couche::retirerForme(int index)
 {
-	if(index >= 0 and index < taille)
+	if(index >= 0 && index < taille)
 	{
 		Forme* ptr = formes[index];
 		for(int i = index; i< taille - 1; i++)
@@ -95,7 +95,7 @@ Forme* Couche::retirerForme(int index)
 
 Forme* Couche::getForme(int index)
 {
-	if(index >= 0 and index < taille)
+	if(index >= 0 && index < taille)
 	{
 		return formes[index];
 	}
@@ -107,7 +107,7 @@ Forme* Couche::getForme(int index)
 
 bool Couche::translaterCouche(int deltaX, int deltaY)
 {
-	if(deltaX != 0 and deltaY != 0)
+	if(deltaX != 0 && deltaY != 0)
 	{
 		for(int i = 0; i < taille; i++)
 		{

@@ -36,7 +36,7 @@ bool Canevas::ajouterCouche()
 bool Canevas::retirerCouche(int index)
 {
 	//S'assurer que l'index est valide
-	if(index >= 0 and index < this->vecteur.getTaille())
+	if(index >= 0 && index < this->vecteur.getTaille())
 	{
 	this->desactiverCouche(index);
 		bool resultReinitialisation = this->reinitialiserCouche(index);
@@ -70,7 +70,7 @@ bool Canevas::reinitialiserCouche(int index)
 {
 	Couche* coucheAReinitialiser = this->vecteur.getElement(index);
 	//Vérifier que la couche n'est pas active
-	if(coucheAReinitialiser != nullptr and coucheAReinitialiser->getEtat() != ACTIVE){
+	if(coucheAReinitialiser != nullptr && coucheAReinitialiser->getEtat() != ACTIVE){
 		coucheAReinitialiser->reinitialiserCouche();
 		return true;
 	}

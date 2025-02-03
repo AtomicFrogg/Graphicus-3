@@ -87,7 +87,7 @@ void Vecteur::afficher(ostream &s){
 
 
 Couche* Vecteur::retirerElement(int index){
-	if(index < this->taille and index >= 0){
+	if(index < this->taille && index >= 0){
 		Couche* elementRetire = this->elements[index];
 		//Tasser tous ceux après
 		for(int i = index; i < this->taille - 1; i ++){
@@ -104,7 +104,7 @@ Couche* Vecteur::retirerElement(int index){
 
 Couche* Vecteur::getElement(int index){
 	
-	if(index < this->taille and index >= 0){
+	if(index < this->taille && index >= 0){
 		return this->elements[index];
 	}
 	else{
