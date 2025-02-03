@@ -14,6 +14,7 @@
 #define COUCHE_H
 
 #include "forme.h"
+#include "vecteur.h"
 
 using namespace std;
 
@@ -46,9 +47,9 @@ class Couche
 		int getTaille();
 
 	private:
-		Forme* *formes;
+		Vecteur<forme*> formes;
 		int etat;
-		int taille;
+		//int taille;
 };
 
 #endif
