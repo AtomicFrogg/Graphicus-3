@@ -1,5 +1,4 @@
-#ifndef VECTEUR_H
-#define VECTEUR_H
+#pragma once
 
 #include <iostream>
 #include "couche.h"
@@ -32,7 +31,7 @@ template <class T>
 Vecteur<T>::Vecteur() {
 	this->capacite = 1;
 	this->taille = 0;
-	this->elements = new Couche * [this->capacite];
+	this->elements = new T[this->capacite];
 }
 
 
@@ -54,8 +53,8 @@ int Vecteur<T>::getTaille() {
 template <class T>
 void Vecteur<T>::doublerCapacite() {
 	this->capacite = this->capacite * 2;
-	Couche** elements2;
-	elements2 = new Couche * [this->capacite];
+	T* elements2;
+	elements2 = new T[this->capacite];
 	//Copier le contenu
 	for (int i = 0; i < this->taille; i++) {
 		elements2[i] = this->elements[i];
@@ -68,7 +67,7 @@ template <class T>
 void Vecteur<T>::viderVecteur() {
 	//Supprimer l'ancien tableau pour en créer un nouveau vide
 	delete[] this->elements;
-	this->elements = new Couche * [this->capacite];
+	this->elements = new T[this->capacite];
 	this->taille = 0;
 }
 
@@ -126,7 +125,7 @@ void Vecteur<T>::afficher(ostream& s) {
 template <class T>
 T Vecteur<T>::retirerElement(int index) {
 	if (index < this->taille && index >= 0) {
-		Couche* elementRetire = this->elements[index];
+		T elementRetire = this->elements[index];
 		//Tasser tous ceux après
 		for (int i = index; i < this->taille - 1; i++) {
 			this->elements[i] = this->elements[i + 1];
@@ -151,6 +150,3 @@ T Vecteur<T>::getElement(int index) {
 	}
 }
 
-
-
-#endif
