@@ -14,14 +14,15 @@
 
 Couche::Couche()
 {
-	this->formes = new Forme*[MAX_FORMES];
+	//this->formes = new Forme*[MAX_FORMES];
+	this->formes = *new Vecteur<Forme*>();
 	this->etat = INITIALISE;
 	this->taille = 0;
 }
 
 Couche::~Couche()
 {
-	delete formes;
+	//delete formes;
 }
 
 void Couche::setEtat(int nouvelEtat)
@@ -46,10 +47,11 @@ bool Couche::reinitialiserCouche()
 	else
 	{
 		this->etat = INITIALISE;
-		Forme* *formes2 = new Forme*[MAX_FORMES];
+		/*Forme** formes2 = new Forme * [MAX_FORMES];
 		delete formes;
 		formes = formes2;
-		taille = 0;
+		taille = 0;*/
+		formes.viderVecteur();
 		return SUCCES;
 	}
 }
@@ -66,10 +68,11 @@ double Couche::aireTotale()
 
 bool Couche::ajouterForme(Forme* ptr)
 {
-	if(taille < MAX_FORMES)
+	if(formes.getTaille()/*taille*/ < MAX_FORMES)
 	{
-		formes[taille] = ptr;
-		taille++;
+		//formes[taille] = ptr;
+		//taille++;
+		formes.ajouterElement(ptr);
 		return SUCCES;
 	}
 	return FAIL;
@@ -77,14 +80,15 @@ bool Couche::ajouterForme(Forme* ptr)
 
 Forme* Couche::retirerForme(int index)
 {
-	if(index >= 0 && index < taille)
+	if(index >= 0 && index < formes.getTaille()/*taille*/)
 	{
-		Forme* ptr = formes[index];
+		formes.retirerElement(index)
+		/*Forme* ptr = formes[index];
 		for(int i = index; i< taille - 1; i++)
 		{
 			formes[i] = formes[i+1];
 		}
-		taille--;
+		taille--;*/
 		return ptr;
 	}
 	else
@@ -95,9 +99,9 @@ Forme* Couche::retirerForme(int index)
 
 Forme* Couche::getForme(int index)
 {
-	if(index >= 0 && index < taille)
+	if(index >= 0 && index < formes.getTaille/*taille*/)
 	{
-		return formes[index];
+		return formes.getElement(index)/*formes[index]*/;
 	}
 	else
 	{
@@ -109,9 +113,12 @@ bool Couche::translaterCouche(int deltaX, int deltaY)
 {
 	if(deltaX != 0 && deltaY != 0)
 	{
+		Forme* it = nullptr;
 		for(int i = 0; i < taille; i++)
 		{
-			formes[i]->translater(deltaX, deltaY);
+			/*formes[i]->translater(deltaX, deltaY);*/
+			it = formes.getElement(i);
+			it->translater(deltaX, deltaY);
 		}
 		return SUCCES;
 	}
@@ -138,10 +145,11 @@ void Couche::afficher(ostream &s)
 	}
 	if(taille > 0)
 	{
-		for(int i = 0; i < taille; i++)
+		/*for (int i = 0; i < taille; i++)
 		{
 			formes[i]->afficher(s);
-		}
+		}*/
+		formes.afficher(s);
 	}
 	else if(taille == 0)
 	{
@@ -155,7 +163,7 @@ void Couche::afficher(ostream &s)
 
 int Couche::getTaille()
 {
-	return taille;
+	return formes.getTaille()/*taille*/;
 }
 
 
