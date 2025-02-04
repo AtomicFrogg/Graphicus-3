@@ -7,14 +7,18 @@
  * Description: gestionnaire de tests pour l'application Graphicus. Ce
  *    fichier fait partie de la distribution de Graphicus.
 ********/
-#include "tests.h"
+
+#include <QApplication>
+#include "Interface.h"
 
 using namespace std;
 
-int main()
+int main(int argc, char** argv)
 {
  //  Tests tests; 
   // tests.tests_application_cas_02();
-   return 0;
+	QApplication app(argc, argv);
+	Interface gui("test PATATE 2.0");
+	return app.exec();
 }
 

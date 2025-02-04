@@ -39,10 +39,19 @@ class Couche
 		bool reinitialiserCouche();
 		bool ajouterForme(Forme* ptr);
 		Forme* retirerForme(int index);
-		Forme* getForme(int index);   
+		Forme* getForme(int index);
+		Forme* getForme2();
 		double aireTotale();
 		bool translaterCouche(int deltaX, int deltaY);
 		int getTaille();
+
+		/// Navigation
+		void formePremiere();
+		void formePrecedente();
+		void formeSuivante();
+		void formeDerniere();
+		int getPosition();
+		
 
 	private:
 		Vecteur<Forme*> formes;

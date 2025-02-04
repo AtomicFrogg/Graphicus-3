@@ -110,6 +110,9 @@ Forme* Couche::getForme(int index)
 		return nullptr;
 	}
 }
+Forme* Couche::getForme2() {
+	return formes.getElement(formes.getPosition());
+}
 
 bool Couche::translaterCouche(int deltaX, int deltaY)
 {
@@ -167,6 +170,26 @@ int Couche::getTaille()
 {
 	return formes.getTaille()/*taille*/;
 }
+
+void Couche::formePremiere() {
+	formes.resetPosition();
+}
+
+void Couche::formePrecedente() {
+	--formes;
+}
+void Couche::formeSuivante() {
+	++formes;
+}
+void Couche::formeDerniere() {
+	formes.maxPosition();
+}
+
+int Couche::getPosition()
+{
+	return formes.getPosition();
+}
+
 
 
 
