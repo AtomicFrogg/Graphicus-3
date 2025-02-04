@@ -47,7 +47,7 @@ class Couche
 		int getTaille();
 
 	private:
-		Vecteur<forme*> formes;
+		Vecteur<Forme*> formes;
 		int etat;
 		//int taille;
 };

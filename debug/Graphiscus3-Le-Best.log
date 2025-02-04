@@ -1,173 +1,23 @@
-﻿  Generate moc_predefs.h
-  canevas.cpp
-  carre.cpp
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.h(45,12): error C2955: 'Vecteur' : l'utilisation de classe modèle requiert une liste d'arguments modèle
-  (compiler le fichier source 'canevas.cpp')
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(9,7):
-      voir la déclaration de 'Vecteur'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(15,1): error C2512: 'Vecteur' : aucun constructeur par défaut approprié disponible
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(9,7):
-      voir la déclaration de 'Vecteur'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(16,16): error C2582: 'operator =' fonction non disponible dans 'Vecteur'
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(32,16): error C2662: 'bool Vecteur<T>::ajouterElement(T)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(32,6):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(32,6):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(19,7):
-      voir la déclaration de 'Vecteur<T>::ajouterElement'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(32,16):
-      lors de la tentative de mise en correspondance de la liste des arguments '(Couche *)'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(39,41): error C2662: 'int Vecteur<T>::getTaille(void)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(39,31):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(39,31):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(15,6):
-      voir la déclaration de 'Vecteur<T>::getTaille'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(39,41):
-      lors de la tentative de mise en correspondance de la liste des arguments '()'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(45,41): error C2662: 'T Vecteur<T>::retirerElement(int)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(45,31):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(45,31):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(21,4):
-      voir la déclaration de 'Vecteur<T>::retirerElement'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(45,41):
-      lors de la tentative de mise en correspondance de la liste des arguments '(int)'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(58,29): error C2662: 'int Vecteur<T>::getTaille(void)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(58,19):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(58,19):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(15,6):
-      voir la déclaration de 'Vecteur<T>::getTaille'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(58,29):
-      lors de la tentative de mise en correspondance de la liste des arguments '()'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(60,42): error C2662: 'T Vecteur<T>::getElement(int)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(60,32):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(60,32):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(22,4):
-      voir la déclaration de 'Vecteur<T>::getElement'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(60,42):
-      lors de la tentative de mise en correspondance de la liste des arguments '(int)'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(71,47): error C2662: 'T Vecteur<T>::getElement(int)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(71,37):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(71,37):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(22,4):
-      voir la déclaration de 'Vecteur<T>::getElement'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(71,47):
-      lors de la tentative de mise en correspondance de la liste des arguments '(int)'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(83,41): error C2662: 'T Vecteur<T>::getElement(int)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(83,31):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(83,31):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(22,4):
-      voir la déclaration de 'Vecteur<T>::getElement'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(83,41):
-      lors de la tentative de mise en correspondance de la liste des arguments '(int)'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(97,44): error C2662: 'T Vecteur<T>::getElement(int)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(97,34):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(97,34):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(22,4):
-      voir la déclaration de 'Vecteur<T>::getElement'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(97,44):
-      lors de la tentative de mise en correspondance de la liste des arguments '(int)'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(132,35): error C2662: 'int Vecteur<T>::getTaille(void)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(132,25):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(132,25):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(15,6):
-      voir la déclaration de 'Vecteur<T>::getTaille'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(132,35):
-      lors de la tentative de mise en correspondance de la liste des arguments '()'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(134,38): error C2662: 'T Vecteur<T>::getElement(int)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(134,28):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(134,28):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(22,4):
-      voir la déclaration de 'Vecteur<T>::getElement'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(134,38):
-      lors de la tentative de mise en correspondance de la liste des arguments '(int)'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(151,19): error C2662: 'int Vecteur<T>::getTaille(void)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(151,9):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(151,9):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(15,6):
-      voir la déclaration de 'Vecteur<T>::getTaille'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(151,19):
-      lors de la tentative de mise en correspondance de la liste des arguments '()'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(155,18): error C2662: 'int Vecteur<T>::getTaille(void)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(155,10):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(155,10):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(15,6):
-      voir la déclaration de 'Vecteur<T>::getTaille'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(155,18):
-      lors de la tentative de mise en correspondance de la liste des arguments '()'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(158,36): error C2662: 'int Vecteur<T>::getTaille(void)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(158,26):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(158,26):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(15,6):
-      voir la déclaration de 'Vecteur<T>::getTaille'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(158,36):
-      lors de la tentative de mise en correspondance de la liste des arguments '()'
-  
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(161,18): error C2662: 'T Vecteur<T>::getElement(int)' : impossible de convertir un pointeur 'this' de 'Vecteur' en 'Vecteur<T> &'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(161,8):
-      Raison : impossible de convertir de 'Vecteur' en 'Vecteur<T>'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(161,8):
-      La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(22,4):
-      voir la déclaration de 'Vecteur<T>::getElement'
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.cpp(161,18):
-      lors de la tentative de mise en correspondance de la liste des arguments '(int)'
-  
-  cercle.cpp
+﻿  canevas.cpp
   couche.cpp
-  forme.cpp
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.cpp(20,8): error C2039: 'taille' n'est pas membre de 'Couche'
+      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.h(32,7):
+      voir la déclaration de 'Couche'
+  
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.cpp(62,19): error C2065: 'taille' : identificateur non déclaré
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.cpp(64,25): error C2676: '[' binaire : 'Vecteur<Forme *>' ne définit pas cet opérateur ou une conversion vers un type acceptable pour l'opérateur prédéfini
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.cpp(92,3): error C2143: erreur de syntaxe : absence de ';' avant 'return'
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.cpp(92,10): error C2065: 'ptr' : identificateur non déclaré
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.cpp(102,34): error C3867: 'Vecteur<Forme *>::getTaille' : syntaxe non-standard ; utilisez '&' pour créer un pointeur vers un membre
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.cpp(102,25): error C2446: '<' : pas de conversion de 'int (__cdecl Vecteur<Forme *>::* )(void)' en 'int'
+      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.cpp(102,34):
+      Aucun contexte dans lequel cette conversion est possible
+  
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.cpp(117,22): error C2065: 'taille' : identificateur non déclaré
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.cpp(146,5): error C2065: 'taille' : identificateur non déclaré
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.cpp(154,10): error C2065: 'taille' : identificateur non déclaré
   graphicus-3.cpp
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.h(45,12): error C2955: 'Vecteur' : l'utilisation de classe modèle requiert une liste d'arguments modèle
-  (compiler le fichier source 'graphicus-3.cpp')
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(9,7):
-      voir la déclaration de 'Vecteur'
-  
-  interface.cpp
-  rectangle.cpp
   tests.cpp
-C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\canevas.h(45,12): error C2955: 'Vecteur' : l'utilisation de classe modèle requiert une liste d'arguments modèle
-  (compiler le fichier source 'tests.cpp')
-      C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(9,7):
-      voir la déclaration de 'Vecteur'
-  
 C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\tests.cpp(78,12): error C2641: impossible de déduire les arguments de modèle pour 'Vecteur'
 C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\tests.cpp(78,12): error C2783: 'Vecteur<T> Vecteur(void)' : nous n’avons pas pu déduire modèle de l'argument 'T'.
       C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.h(12,2):
@@ -274,6 +124,15 @@ C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\tests.cpp(280,13): 
       lors de la tentative de mise en correspondance de la liste des arguments '()'
   
   vecteur.cpp
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.h(50,10): error C2143: erreur de syntaxe : absence de ';' avant '<'
+  (compiler le fichier source 'vecteur.cpp')
+  
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.h(50,3): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+  (compiler le fichier source 'vecteur.cpp')
+  
+C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\couche.h(50,25): error C2238: jetons inattendus avant ';'
+  (compiler le fichier source 'vecteur.cpp')
+  
 C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.cpp(3,9): error C2065: 'T' : identificateur non déclaré
 C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.cpp(3,1): error C2923: Vecteur' : 'T' n'est pas un argument de type modèle valide pour le paramètre 'T'.
       C:\Users\maste\Desktop\code\S2\APP 3\Graphicus 3\Graphicus 3\vecteur.cpp(3,9):

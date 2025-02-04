@@ -1,11 +1,11 @@
 #ifndef VECTEUR_H
-#define CANEVAS_H
+#define VECTEUR_H
 
 #include <iostream>
 #include "couche.h"
 
 using namespace std;
-template  <typename T>
+template  <class T>
 class Vecteur{
 
 public :
