@@ -23,13 +23,10 @@ public :
 	T getElement(int index);
 	T operator[](int i);
 	void operator+=(T item);
-	T operator>>(istream& flot, Vecteur vector);
-	T operator<<();
+	void operator>>(istream& flot, Vecteur<T> vector);
+	void operator<<(ostream& flot, Vecteur<T> item);
 	T operator++();
 	T operator--();
-	void resetPosition();
-	void maxPosition();
-	int getPosition();
 	
 
 private:
@@ -224,7 +221,10 @@ void Vecteur<T>::operator>>(istream &flot,Vecteur<T> vector)
 template<class T>
 void Vecteur<T>::operator<<(ostream& flot, Vecteur item)
 {
-
+	for (int i = 0; i < taille; i++)
+	{
+		item[i].afficher(flot);
+	}
 }
 
 template<class T>
@@ -252,17 +252,4 @@ T Vecteur<T>::operator[](int i )
 	return elements[i];
 }
 
-template<class T>
-void Vecteur<T>::resetPosition() {
-	position = 0;
-}
-
-template<class T>
-int Vecteur<T>::getPosition() {
-	return position;
-}
-template<class T>
-void Vecteur<T>::maxPosition() {
-	position = taille-1;
-}
 

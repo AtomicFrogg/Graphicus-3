@@ -135,34 +135,34 @@ bool Couche::translaterCouche(int deltaX, int deltaY)
 
 void Couche::afficher(ostream &s)
 {
-	s << "Etat: ";
+	s << "L ";
 	if(etat == INITIALISE)
 	{
-		s<< "INITIALISE" << endl;
+		s<< "i" << endl;
 	}
 	if(etat == ACTIVE)
 	{
-		s<< "ACTIVE" << endl;	
+		s<< "a" << endl;	
 	}
 	if(etat == INACTIVE)
 	{
-		s<< "INACTIVE"<<endl;
+		s<< "x"<<endl;
 	}
-	if(formes.getTaille() > 0)
-	{
-		/*for (int i = 0; i < taille; i++)
-		{
-			formes[i]->afficher(s);
-		}*/
-		formes.afficher(s);
-	}
-	else if(formes.getTaille() == 0)
-	{
-		s << "Couche = vide" << endl;
-	}
+	//if(formes.getTaille() > 0)
+	//{
+	//	/*for (int i = 0; i < taille; i++)
+	//	{
+	//		formes[i]->afficher(s);
+	//	}*/
+	//	formes.afficher(s);
+	//}
+	//else if(formes.getTaille() == 0)
+	//{
+	//	s << "Couche = vide" << endl;
+	//}
 	else
 	{
-		s << "ERREUR TAILLE DE LA COUCHE"<<endl;
+		s << "erreur etat de la couche"<<endl;
 	}
 }
 

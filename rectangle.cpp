@@ -49,7 +49,7 @@ double Rectangle::aire()
 
 void Rectangle::afficher(ostream &s)
 {
-	s << "Rectangle (x=" << ancrage.x << ", y=" << ancrage.y << ", l=" << longueur << ", h=" << hauteur << ", aire=" << aire() << ")" << endl;
+	s << "R " << ancrage.x << " " << ancrage.y << " " << longueur << " " << hauteur << endl;
 }
 
 
