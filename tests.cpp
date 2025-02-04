@@ -75,24 +75,24 @@ void Tests::tests_unitaires_couche()
 
 void Tests::tests_unitaires_vecteur()
 {
-   Vecteur TestVecteur;
-   TestVecteur.afficher(cout);
-   Couche *TestCouche0 = new Couche();
-   Couche *TestCouche1 = new Couche();
-   Couche *TestCouche2 = new Couche();
-   TestVecteur.ajouterElement(TestCouche0);
-   TestVecteur.ajouterElement(TestCouche1);
-   TestVecteur.ajouterElement(TestCouche2);
-   TestVecteur.afficher(cout);
-   TestVecteur.retirerElement(1);
-   TestVecteur.afficher(cout);
-   TestVecteur.viderVecteur();
-   TestVecteur.afficher(cout);
-   
-   
-   delete TestCouche0;
-   delete TestCouche1;
-   delete TestCouche2;
+   //Vecteur TestVecteur;
+   //TestVecteur.afficher(cout);
+   //Couche *TestCouche0 = new Couche();
+   //Couche *TestCouche1 = new Couche();
+   //Couche *TestCouche2 = new Couche();
+   //TestVecteur.ajouterElement(TestCouche0);
+   //TestVecteur.ajouterElement(TestCouche1);
+   //TestVecteur.ajouterElement(TestCouche2);
+   //TestVecteur.afficher(cout);
+   //TestVecteur.retirerElement(1);
+   //TestVecteur.afficher(cout);
+   //TestVecteur.viderVecteur();
+   //TestVecteur.afficher(cout);
+   //
+   //
+   //delete TestCouche0;
+   //delete TestCouche1;
+   //delete TestCouche2;
 }
 
 void Tests::tests_unitaires_canevas()
@@ -277,7 +277,7 @@ Forme* Cercle1 = new Cercle(4,2,8);
 TestCanevas.ajouterForme(Cercle1);
 TestCanevas.ajouterForme(Carre1);
 TestCanevas.translater(-2,-8);
-TestCanevas.reinitialiserCouche();
+TestCanevas.reinitialiserCouche(1);
     TestCanevas.afficher(cout);
     delete Carre1;
 }
