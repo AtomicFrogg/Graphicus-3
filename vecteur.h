@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include "couche.h"
+#include "carre.h"
+#include "cercle.h"
 
 using namespace std;
 template  <class T>
@@ -21,8 +23,8 @@ public :
 	T getElement(int index);
 	T operator[](int i);
 	void operator+=(T item);
-	/*T operator>>();
-	T operator<<();*/
+	T operator>>(istream& flot, Vecteur vector);
+	T operator<<();
 	T operator++();
 	T operator--();
 	void resetPosition();
@@ -167,17 +169,63 @@ void Vecteur<T>::operator+=(T item)
 	ajouterElement(item);
 }
 
-/*template<class T>
-T Vecteur<T>::operator>>()
+template<class T>
+void Vecteur<T>::operator>>(istream &flot,Vecteur<T> vector)
 {
-	return T();
+	char item;
+	while (!feof(flot))
+	{
+		
+		switch (item)
+		{
+		case 'L':
+			Couche * nouvelleCouche = new Couche();
+			char etat;
+			flot >> etat;
+			switch (etat)
+			{
+			case 'a':
+				nouvelleCouche->setEtat(ACTIVE);
+			case 'i':
+				nouvelleCouche->setEtat(INITIALISE);
+			case 'x':
+				nouvelleCouche->setEtat(INACTIVE);
+			default:
+				cerr << "Erreur de lecture de l'état de la couche (CODE 18)";
+				break;
+			}
+			vector.ajouterElement(nouvelleCouche);
+
+		case 'R':
+			int x, y, l, h;
+			flot >> x >> y >> l >> h;
+			Forme** nouveauRectangle = new Rectangle(l, h, x, y);
+			vector.ajouterElement(nouveauRectangle);
+
+		case 'K':
+			int x, y, c;
+			flot >> x >> y >> c;
+			Forme** nouveauCarre = new Carre(c, x, y);
+			vector.ajouterElement(nouveauCarre);
+
+		case 'C':
+			int x, y, r;
+			flot >> x >> y >> r;
+			Forme** nouveauCercle = new Cercle(r, x, y);
+			vector.ajouterElement(nouveauCercle);
+
+		default:
+			cerr << "Erreur de lecture de l'input du vecteur (CODE 18)"
+			break;
+		}
+	}
 }
 
 template<class T>
-T Vecteur<T>::operator<<()
+void Vecteur<T>::operator<<(ostream& flot, Vecteur item)
 {
-	return T();
-}*/
+
+}
 
 template<class T>
 T Vecteur<T>::operator++()
@@ -190,7 +238,10 @@ template<class T>
 T Vecteur<T>::operator--()
 {
 	if (!position)
-		return elements[taille];
+	{
+		position = taille - 1;
+		return elements[position];
+	}
 	--position;
 	return elements[position];
 }
