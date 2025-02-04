@@ -13,6 +13,10 @@
 
 .vs/Graphicus-3/FileContentIndex/bd5e0602-4a66-4253-b8be-7424cd9d5af7.vsidx
 
+<<<<<<< Updated upstream
 Graphiscus3-Le-Best.vcxproj
+=======
+*.vcxproj
+>>>>>>> Stashed changes
 
 Graphiscus3-Le-Best.vcxproj.filters
