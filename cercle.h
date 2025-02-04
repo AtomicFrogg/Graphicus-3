@@ -1,5 +1,4 @@
-#ifndef CERCLE_H
-#define CERCLE_H
+#pragma once
 #include "forme.h"
 #include <iostream>
 using namespace std;
@@ -19,4 +18,4 @@ class Cercle : public Forme
 		int rayon;
 };
 
-#endif
+

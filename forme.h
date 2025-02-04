@@ -7,8 +7,7 @@
  *    la distribution de Graphicus.
 ********/
 
-#ifndef FORME_H
-#define FORME_H
+#pragma once
 
 #include <iostream>
 #include "coordonnee.h"
@@ -29,4 +28,4 @@ protected:
   Coordonnee ancrage;
 };
 
-#endif
+

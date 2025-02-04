@@ -9,8 +9,7 @@
  *    Ce fichier fait partie de la distribution de Graphicus.
 ********/
 
-#ifndef CANEVAS_H
-#define CANEVAS_H
+#pragma once
 
 #include <iostream>
 #include "forme.h"
@@ -47,4 +46,3 @@ private:
    
 };
 
-#endif

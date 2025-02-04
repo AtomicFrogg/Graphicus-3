@@ -1,5 +1,4 @@
-#ifndef VECTEUR_H
-#define VECTEUR_H
+#pragma once
 
 #include <iostream>
 #include "couche.h"
@@ -152,5 +151,3 @@ T Vecteur<T>::getElement(int index) {
 }
 
 
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef RECTANGLE_H
-#define RECTANGLE_H
+#pragma once
 #include "forme.h"
 #include <iostream>
 using namespace std;
@@ -24,4 +23,4 @@ class Rectangle : public Forme
 		int longueur;
 };
 
-#endif
+

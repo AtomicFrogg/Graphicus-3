@@ -1,5 +1,4 @@
-#ifndef CARRE_H
-#define CARRE_H
+#pragma once
 #include "rectangle.h"
 #include <iostream>
 using namespace std;
@@ -15,4 +14,3 @@ class Carre : public Rectangle
 		void setCote(int x);
 };
 
-#endif

@@ -9,9 +9,7 @@
  *    les specifications de Graphicus. Ce fichier fait partie de 
  *    la distribution de Graphicus.
 ********/
-
-#ifndef COUCHE_H
-#define COUCHE_H
+#pragma once
 
 #include "forme.h"
 #include "vecteur.h"
@@ -52,4 +50,3 @@ class Couche
 		//int taille;
 };
 
-#endif
