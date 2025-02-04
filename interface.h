@@ -8,7 +8,6 @@ private:
 	Canevas dessin;
 public:
 	Interface(const char* theName = nullptr);
-	virtual void reinitialiserCanevas();
 	virtual bool ouvrirFichier(const char*);
 	virtual bool sauvegarderFichier(const char*);
 	virtual void coucheTranslater(int deltaX, int deltaY);

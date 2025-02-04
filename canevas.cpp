@@ -164,6 +164,54 @@ void Canevas::afficher(ostream & s)
 		
 	}
 }
+void Canevas::couchePremiere() {
+	vecteur.resetPosition();
+	activerCouche(vecteur.getPosition());
+}
+
+void Canevas::couchePrecedente() {
+	--vecteur;
+	activerCouche(vecteur.getPosition());
+}
+
+void Canevas::coucheSuivante() {
+	++vecteur;
+	activerCouche(vecteur.getPosition());
+}
+
+void Canevas::coucheDerniere() {
+	vecteur.maxPosition();
+	activerCouche(vecteur.getPosition());
+}
+
+void Canevas::formePremiere() {
+	vecteur.getElement(vecteur.getPosition())->formePremiere();
+}
+
+void Canevas::formePrecedente() {
+	vecteur.getElement(vecteur.getPosition())->formePrecedente();
+}
+
+void Canevas::formeSuivante() {
+	vecteur.getElement(vecteur.getPosition())->formeSuivante();
+}
+
+void Canevas::formeDerniere() {
+	vecteur.getElement(vecteur.getPosition())->formeDerniere();
+}
+Forme* Canevas::getForme() {
+	return vecteur.getElement(vecteur.getPosition())->getForme2();
+}
+
+int Canevas::getCouchePosition()
+{
+	return vecteur.getPosition();
+}
+
+int Canevas::getFormePosition()
+{
+	return vecteur.getElement(vecteur.getPosition())->getPosition();
+}
 
 
 

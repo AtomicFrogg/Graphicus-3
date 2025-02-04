@@ -26,6 +26,7 @@ public :
 	T operator++();
 	T operator--();
 	void resetPosition();
+	void maxPosition();
 	int getPosition();
 	
 
@@ -199,13 +200,18 @@ T Vecteur<T>::operator[](int i )
 {
 	return elements[i];
 }
+
 template<class T>
 void Vecteur<T>::resetPosition() {
 	position = 0;
 }
+
 template<class T>
 int Vecteur<T>::getPosition() {
 	return position;
 }
-
+template<class T>
+void Vecteur<T>::maxPosition() {
+	position = taille-1;
+}
 

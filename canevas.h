@@ -40,6 +40,18 @@ public:
    bool translater(int deltaX, int deltaY);
    void afficher(ostream & s);
 
+/// Navigation
+   void couchePremiere();
+   void couchePrecedente();
+   void coucheSuivante();
+   void coucheDerniere();
+   void formePremiere();
+   void formePrecedente();
+   void formeSuivante();
+   void formeDerniere();
+   Forme* getForme();
+   int getCouchePosition();
+   int getFormePosition();
 private:   
    Vecteur <Couche*> vecteur;
    Couche* coucheActive;

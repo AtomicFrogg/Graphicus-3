@@ -11,7 +11,7 @@ Interface::Interface(const char* theName) : GraphicusGUI(theName)
 {
 }
 
-void Interface::reinitialiserCanevas()
+/*void Interface::reinitialiserCanevas()
 {
 	ostringstream os;
 	random_device r;
@@ -36,7 +36,7 @@ void Interface::reinitialiserCanevas()
 
 	// Ensuite, on dessine ce qui a été généré dans Graphicus
 	dessiner(os.str().c_str());
-}
+}*/
 
 bool Interface::ouvrirFichier(const char*) {
 	return false;
@@ -79,38 +79,39 @@ void Interface::coucheAjouter() {
 }
 
 void Interface::coucheRetirer() {
-	dessin.retirerCouche();
+	dessin.retirerCouche(dessin.getCouchePosition());
 }
 // Menu Formes
 void Interface::retirerForme() {
-	Forme* it = dessin.retirerForme();
+	Forme* it = dessin.getForme();
+	dessin.retirerForme(dessin.getFormePosition());
 	delete it;
 }
 
 // Menu navigation
 void Interface::couchePremiere() {
-	l
+	dessin.couchePremiere();
 }
 
 void Interface::couchePrecedente() {
-	l
+	dessin.couchePrecedente();
 }
 
 void Interface::coucheSuivante() {
-	l
+	dessin.coucheSuivante();
 }
 void Interface::coucheDerniere() {
-l
+	dessin.coucheDerniere();
 }
 void Interface::formePremiere() {
-	l
+	dessin.formePremiere();
 }
 void Interface::formePrecedente() {
-	l
+	dessin.formePrecedente();
 }
 void Interface::formeSuivante() {
-	l
+	dessin.formeSuivante();
 }
 void Interface::formeDerniere() {
-	l
+	dessin.formeDerniere();
 }
