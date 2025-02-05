@@ -17,6 +17,10 @@ int main(int argc, char** argv)
 {
  //  Tests tests; 
   // tests.tests_application_cas_02();
+	Vecteur<Couche> Test;
+	Couche TestCouche;
+	Test.ajouterElement(TestCouche);
+	Test.afficher(std::cout);
 	QApplication app(argc, argv);
 	Interface gui("test PATATE 2.0");
 	return app.exec();

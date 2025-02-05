@@ -23,10 +23,11 @@ public :
 	T getElement(int index);
 	T operator[](int i);
 	void operator+=(T item);
-	void operator>>(istream& flot, Vecteur<T> vector);
-	void operator<<(ostream& flot, Vecteur<T> item);
 	T operator++();
 	T operator--();
+	void maxPosition();
+	void resetPosition();
+	int getPosition();
 	
 
 private:
@@ -166,50 +167,61 @@ void Vecteur<T>::operator+=(T item)
 	ajouterElement(item);
 }
 
+
 template<class T>
-void Vecteur<T>::operator>>(istream &flot,Vecteur<T> vector)
+void operator>>(istream &flot,Vecteur<T>& vector)
 {
 	char item;
 	while (!feof(flot))
 	{
-		
+		flot >> item;
 		switch (item)
 		{
 		case 'L':
-			Couche * nouvelleCouche = new Couche();
+			Couche* nouvelleCouche = new Couche();
 			char etat;
 			flot >> etat;
 			switch (etat)
 			{
 			case 'a':
 				nouvelleCouche->setEtat(ACTIVE);
+				break;
+
 			case 'i':
 				nouvelleCouche->setEtat(INITIALISE);
+				break;
+
 			case 'x':
 				nouvelleCouche->setEtat(INACTIVE);
+				break;
+
 			default:
 				cerr << "Erreur de lecture de l'état de la couche (CODE 18)";
 				break;
 			}
-			vector.ajouterElement(nouvelleCouche);
+			vector->ajouterElement(nouvelleCouche);
+			break;
 
 		case 'R':
 			int x, y, l, h;
 			flot >> x >> y >> l >> h;
 			Forme** nouveauRectangle = new Rectangle(l, h, x, y);
 			vector.ajouterElement(nouveauRectangle);
+			break;
 
 		case 'K':
 			int x, y, c;
 			flot >> x >> y >> c;
 			Forme** nouveauCarre = new Carre(c, x, y);
 			vector.ajouterElement(nouveauCarre);
+			break;
 
 		case 'C':
 			int x, y, r;
 			flot >> x >> y >> r;
 			Forme** nouveauCercle = new Cercle(r, x, y);
 			vector.ajouterElement(nouveauCercle);
+			break;
 
 		default:
 			cerr << "Erreur de lecture de l'input du vecteur (CODE 18)"
@@ -219,11 +231,11 @@ void Vecteur<T>::operator>>(istream &flot,Vecteur<T> vector)
 }
 
 template<class T>
-void Vecteur<T>::operator<<(ostream& flot, Vecteur item)
+void operator<<(ostream& flot,Vecteur<T>& item)
 {
-	for (int i = 0; i < taille; i++)
+	for (int i = 0; i < item->getTaille(); i++)
 	{
-		item[i].afficher(flot);
+		item[i]->afficher(flot);
 	}
 }
 
@@ -253,3 +265,16 @@ T Vecteur<T>::operator[](int i )
 }
 
 
+template<class T>
+void Vecteur<T>::resetPosition() {
+	position = 0;
+}
+
+template<class T>
+int Vecteur<T>::getPosition() {
+	return position;
+}
+template<class T>
+void Vecteur<T>::maxPosition() {
+	position = taille - 1;
+}
