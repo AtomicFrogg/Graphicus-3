@@ -38,7 +38,7 @@ Interface::Interface(const char* theName) : GraphicusGUI(theName)
 	dessiner(os.str().c_str());
 }*/
 
-bool Interface::ouvrirFichier(const char*) {
+bool Interface::ouvrirFichier(const char* fichier) {
 	return false;
 }
 

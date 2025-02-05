@@ -25,8 +25,8 @@ const int INACTIVE = 2;
 const bool SUCCES = 1;
 const bool FAIL = 0;
 	
-// À completer
-template<class T>
+
+
 class Couche
 {
 	public:  	
@@ -51,7 +51,6 @@ class Couche
 		void formeSuivante();
 		void formeDerniere();
 		int getPosition();
-		friend void operator>>(istream& flot, Vecteur<T>& vector);
 
 	private:
 		Vecteur<Forme*> formes;
