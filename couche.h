@@ -90,6 +90,7 @@ void operator>>(istream &flot, Vecteur<T>& vector)
 
 			default:
 				cerr << "Erreur de lecture de l'état de la couche (CODE 18)";
+				
 				break;
 			}
 			vector->ajouterElement(nouvelleCouche);

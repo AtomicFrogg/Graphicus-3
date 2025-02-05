@@ -140,11 +140,11 @@ void Couche::afficher(ostream &s)
 	{
 		s<< "i" << endl;
 	}
-	if(etat == ACTIVE)
+	else if(etat == ACTIVE)
 	{
 		s<< "a" << endl;	
 	}
-	if(etat == INACTIVE)
+	else if(etat == INACTIVE)
 	{
 		s<< "x"<<endl;
 	}
