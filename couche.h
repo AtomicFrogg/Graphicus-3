@@ -26,7 +26,7 @@ const bool SUCCES = 1;
 const bool FAIL = 0;
 	
 // À completer
-
+template<class T>
 class Couche
 {
 	public:  	
@@ -51,7 +51,7 @@ class Couche
 		void formeSuivante();
 		void formeDerniere();
 		int getPosition();
-		
+		friend void operator>>(istream& flot, Vecteur<T>& vector);
 
 	private:
 		Vecteur<Forme*> formes;
@@ -67,7 +67,7 @@ void operator>>(istream &flot, Vecteur<T>& vector)
 	flot >> item;
 	while(item != EOF)
 	{
-		
+		int i = -1;
 		switch (item)
 		{
 		case 'L':
@@ -75,6 +75,7 @@ void operator>>(istream &flot, Vecteur<T>& vector)
 			char etat;
 			flot >> etat;
 			switch (etat)
+				i++;
 			{
 			case 'a':
 				nouvelleCouche->setEtat(ACTIVE);
@@ -100,21 +101,21 @@ void operator>>(istream &flot, Vecteur<T>& vector)
 			int x, y, l, h;
 			flot >> x >> y >> l >> h;
 			Forme** nouveauRectangle = new Rectangle(l, h, x, y);
-			vector.ajouterElement(nouveauRectangle);
+			vector.getElement[i].ajouterForme(nouveauRectangle);
 			break;
 
 		case 'K':
 			int x, y, c;
 			flot >> x >> y >> c;
 			Forme** nouveauCarre = new Carre(c, x, y);
-			vector.ajouterElement(nouveauCarre);
+			vector.getElement[i].ajouterForme(nouveauCarre);;
 			break;
 
 		case 'C':
 			int x, y, r;
 			flot >> x >> y >> r;
 			Forme** nouveauCercle = new Cercle(r, x, y);
-			vector.ajouterElement(nouveauCercle);
+			vector.getElement[i].ajouterForme(nouveauCercle);
 			break;
 
 		default:
