@@ -61,12 +61,13 @@ class Couche
 
 
 template<class T>
-void operator>>(istream& flot, Vecteur<T>& vector)
+void operator>>(istream &flot, Vecteur<T>& vector)
 {
 	char item;
-	while (!feof(flot))
+	flot >> item;
+	while(item != EOF)
 	{
-		flot >> item;
+		
 		switch (item)
 		{
 		case 'L':

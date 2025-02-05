@@ -125,7 +125,7 @@ void Vecteur<T>::afficher(ostream& s) {
 	else {
 		for (int i = 0; i < taille; i++) {
 
-			elements[i]->afficher(s);
+			elements[i].afficher(s);
 		}
 	}
 
