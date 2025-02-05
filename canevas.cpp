@@ -146,23 +146,27 @@ bool Canevas::translater(int deltaX, int deltaY)
 
 void Canevas::afficher(ostream & s)
 {
-	cout<<"AFFICHAGE"<<endl;
-	//Vérifier s'il y a des couches
-	if(this->vecteur.getTaille() == 0)
-	{
-		s << "----- Aucune couche ----" << endl;
-	}
-	else if(vecteur.getTaille() != 0)
-	{
-	cout<<"ELSE"<<endl;
-		for(int i = 0; i < this->vecteur.getTaille(); i++)
-		{
-			s << "----- Couche " << i << " -----" << endl;
-			this->vecteur.getElement(i)->afficher(s);
-			s << endl;
-		}
-		
-	}
+	//cout<<"AFFICHAGE"<<endl;
+	////Vérifier s'il y a des couches
+	//if(this->vecteur.getTaille() == 0)
+	//{
+	//	s << "----- Aucune couche ----" << endl;
+	//}
+	//else if(vecteur.getTaille() != 0)
+	//{
+	//cout<<"ELSE"<<endl;
+	//	for(int i = 0; i < this->vecteur.getTaille(); i++)
+	//	{
+	//		s << "----- Couche " << i << " -----" << endl;
+	//		this->vecteur.getElement(i)->afficher(s);
+	//		s << endl;
+	//	}
+	//	
+	//}
+
+	s << vecteur;
+
+
 }
 void Canevas::couchePremiere() {
 	vecteur.resetPosition();
