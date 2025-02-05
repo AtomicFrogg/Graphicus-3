@@ -30,3 +30,4 @@ release
 Debug
 
 testgraphicusgui-v1.0
+*.vcxproj*
