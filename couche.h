@@ -59,3 +59,76 @@ class Couche
 		//int taille;
 };
 
+
+template<class T>
+void operator>>(istream& flot, Vecteur<T>& vector)
+{
+	char item;
+	while (!feof(flot))
+	{
+		flot >> item;
+		switch (item)
+		{
+		case 'L':
+			Couche * nouvelleCouche = new Couche();
+			char etat;
+			flot >> etat;
+			switch (etat)
+			{
+			case 'a':
+				nouvelleCouche->setEtat(ACTIVE);
+				break;
+
+			case 'i':
+				nouvelleCouche->setEtat(INITIALISE);
+				break;
+
+			case 'x':
+				nouvelleCouche->setEtat(INACTIVE);
+				break;
+
+			default:
+				cerr << "Erreur de lecture de l'état de la couche (CODE 18)";
+				break;
+			}
+			vector->ajouterElement(nouvelleCouche);
+			break;
+
+		case 'R':
+			int x, y, l, h;
+			flot >> x >> y >> l >> h;
+			Forme** nouveauRectangle = new Rectangle(l, h, x, y);
+			vector.ajouterElement(nouveauRectangle);
+			break;
+
+		case 'K':
+			int x, y, c;
+			flot >> x >> y >> c;
+			Forme** nouveauCarre = new Carre(c, x, y);
+			vector.ajouterElement(nouveauCarre);
+			break;
+
+		case 'C':
+			int x, y, r;
+			flot >> x >> y >> r;
+			Forme** nouveauCercle = new Cercle(r, x, y);
+			vector.ajouterElement(nouveauCercle);
+			break;
+
+		default:
+			cerr << "Erreur de lecture de l'input du vecteur (CODE 18)";
+			break;
+		}
+	}
+}
+
+template<class T>
+void operator<<(ostream& flot, Vecteur<T>& item)
+{
+	for (int i = 0; i < item->getTaille(); i++)
+	{
+		item[i]->afficher(flot);
+	}
+}
+
+
