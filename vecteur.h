@@ -28,13 +28,15 @@ public :
 	void maxPosition();
 	void resetPosition();
 	int getPosition();
-	
+	void setPile(bool mode);
+	bool getPile();
 
 private:
 	int capacite;
 	int taille;
 	int position;
 	T *elements;
+	bool pile;
 };
 
 template <class T>
@@ -203,6 +205,36 @@ int Vecteur<T>::getPosition() {
 	return position;
 }
 template<class T>
+void Vecteur<T>::setPile(bool mode)
+{
+	pile = mode;
+}
+template<class T>
+bool Vecteur<T>::getPile()
+{
+	return pile;
+}
+template<class T>
 void Vecteur<T>::maxPosition() {
 	position = taille - 1;
+}
+
+template<class T>
+ostream& operator<<(ostream& flot, Vecteur<T> vector)
+{
+	if (vector.getPile())
+	{
+		for (int i = 0; i < vector.getTaille(); i++)
+		{
+			flot << vector[vector.getTaille()-i];
+		}
+	}
+	else 
+	{
+		for (int i = 0; i < vector.getTaille(); i++)
+		{
+			flot << vector[i];
+		}
+	}
+	return flot;
 }

@@ -20,8 +20,8 @@ Interface::Interface(const char* theName) : GraphicusGUI(theName)
 	default_random_engine generator(r());
 	uniform_int_distribution<int> coor(0, 300), dim(20, 100);
 
-	// On s'amuse à générer aléatoirement un canevas en format texte à chaque
-	// fois que la commande de réinitialisation de canevas est choisie par l'usager.
+	// On s'amuse ï¿½ gï¿½nï¿½rer alï¿½atoirement un canevas en format texte ï¿½ chaque
+	// fois que la commande de rï¿½initialisation de canevas est choisie par l'usager.
 	os << "L x" << endl;
 	os << "R " << coor(generator) << " " << coor(generator) << " " << dim(generator) << " " << dim(generator) << endl;
 	os << "K " << coor(generator) << " " << coor(generator) << " " << dim(generator) << endl;
@@ -36,7 +36,7 @@ Interface::Interface(const char* theName) : GraphicusGUI(theName)
 	os << "K " << coor(generator) << " " << coor(generator) << " " << dim(generator) << endl;
 	os << "C " << coor(generator) << " " << coor(generator) << " " << dim(generator) << endl;
 
-	// Ensuite, on dessine ce qui a été généré dans Graphicus
+	// Ensuite, on dessine ce qui a ï¿½tï¿½ gï¿½nï¿½rï¿½ dans Graphicus
 	dessiner(os.str().c_str());
 }*/
 
@@ -98,6 +98,7 @@ void Interface::ajouterCarre(int x, int y, int cote) {
 }
 
 void Interface::modePileChange(bool mode) {
+	dessin.setPile(mode);
 
 	ostringstream os;
 	os << dessin;

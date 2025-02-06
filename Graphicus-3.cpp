@@ -21,18 +21,19 @@ int main(int argc, char** argv)
 	//Couche *TestCouche = new Couche();
 	//Test.ajouterElement(TestCouche);
 
-	//Forme* TestForme = new Rectangle();
+	Forme* TestForme = new Rectangle();
 	//Test.getElement(0)->ajouterForme(TestForme);
 
 
 
-	////Canevas TestCanevas;
-	////TestCanevas.ajouterCouche();
+	Canevas TestCanevas;
+	TestCanevas.ajouterCouche();
 
-	////TestCanevas.ajouterForme(TestForme);
-	////TestCanevas.ajouterCouche();
-	////cout << TestCanevas;
-	//delete TestForme;
+	//TestCanevas.ajouterForme(TestForme);
+	//TestCanevas.ajouterCouche();
+	cout << TestCanevas;
+
+	delete TestForme;
 	//delete TestCouche;
 	//TestCanevas.ajouterCouche();
 	//TestCanevas.ajouterCouche();

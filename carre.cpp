@@ -27,3 +27,10 @@ void Carre::setCote(int x)
 {
 	longueur = x;
 }
+
+
+ostream& operator<<(ostream& flot, Carre& K)
+{
+	flot << "K " << K.getAncrage().x << " " << K.getAncrage().y << " " << K.getLongueur() << endl;
+	return flot;
+}

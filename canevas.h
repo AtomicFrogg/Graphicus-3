@@ -52,22 +52,14 @@ public:
    Forme* getForme();
    int getCouchePosition();
    int getFormePosition();
+   void setPile(bool mode);
    Vecteur<Couche*> getVecteur();
    friend istream& operator>>(istream& flot, const Canevas& s);
+   friend ostream& operator<<(ostream& flot, Canevas& s);
 private:   
    Vecteur<Couche*> vecteur;
    Couche* coucheActive;
    
 };
-//
-//istream& operator>>(istream& flot, const Canevas& s)
-//{
-//	return flot >> s.vecteur;
-//}
-//
-//ostream& operator<<(ostream& flot, Canevas& s)
-//{
-//	s.afficher(flot);
-//	return flot;
-//}
+
 

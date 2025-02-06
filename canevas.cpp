@@ -164,7 +164,7 @@ ostream& Canevas::afficher(ostream & s)
 	//	
 	//}
 
-	//s << vecteur;
+	/*s << vecteur;*/
 
 	return s;
 }
@@ -217,10 +217,25 @@ int Canevas::getFormePosition()
 	return vecteur.getElement(vecteur.getPosition())->getPosition();
 }
 
+void Canevas::setPile(bool mode)
+{
+	vecteur.setPile(mode);
+}
+
 Vecteur<Couche*> Canevas::getVecteur()
 {
 	return vecteur;
 }
 
 
+//istream& operator>>(istream& flot, const Canevas& s)
+//{
+//	return flot >> s.vecteur;
+//}
+
+ostream& operator<<(ostream& flot, Canevas& s)
+{
+	flot << s.vecteur;
+	return flot;
+}
 

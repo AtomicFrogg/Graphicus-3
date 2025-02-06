@@ -133,42 +133,42 @@ bool Couche::translaterCouche(int deltaX, int deltaY)
 	}
 }
 
-void Couche::afficher(ostream &s)
-{
-	s << "L ";
-	if(etat == INITIALISE)
-	{
-		s<< "i" << endl;
-	}
-	else if(etat == ACTIVE)
-	{
-		s<< "a" << endl;	
-	}
-	else if(etat == INACTIVE)
-	{
-		s<< "x"<<endl;
-	}
-	//if(formes.getTaille() > 0)
-	//{
-	//	/*for (int i = 0; i < taille; i++)
-	//	{
-	//		formes[i]->afficher(s);
-	//	}*/
-	//	formes.afficher(s);
-	//}
-	//else if(formes.getTaille() == 0)
-	//{
-	//	s << "Couche = vide" << endl;
-	//}
-	else
-	{
-		s << "erreur etat de la couche"<<endl;
-	}
-	for (int i = 0; i < getTaille(); i++)
-	{
-		//s << formes;
-	}
-}
+//void Couche::afficher(ostream &s)
+//{
+//	s << "L ";
+//	if(etat == INITIALISE)
+//	{
+//		s<< "i" << endl;
+//	}
+//	else if(etat == ACTIVE)
+//	{
+//		s<< "a" << endl;	
+//	}
+//	else if(etat == INACTIVE)
+//	{
+//		s<< "x"<<endl;
+//	}
+//	//if(formes.getTaille() > 0)
+//	//{
+//	//	/*for (int i = 0; i < taille; i++)
+//	//	{
+//	//		formes[i]->afficher(s);
+//	//	}*/
+//	//	formes.afficher(s);
+//	//}
+//	//else if(formes.getTaille() == 0)
+//	//{
+//	//	s << "Couche = vide" << endl;
+//	//}
+//	else
+//	{
+//		s << "erreur etat de la couche"<<endl;
+//	}
+//	for (int i = 0; i < getTaille(); i++)
+//	{
+//		//s << formes;
+//	}
+//}
 
 int Couche::getTaille()
 {
@@ -195,7 +195,31 @@ int Couche::getPosition()
 }
 
 
-
+ostream& operator<<(ostream& flot, Couche* item)
+{
+	flot << "L ";
+	if (item->etat == INITIALISE)
+	{
+		flot << "i" << endl;
+	}
+	else if (item->etat == ACTIVE)
+	{
+		flot << "a" << endl;
+	}
+	else if (item->etat == INACTIVE)
+	{
+		flot << "x" << endl;
+	}
+	else
+	{
+		cout << "ERREUR etat couche";
+	}
+	for (int i = 0; i < item->getTaille(); i++)
+	{
+		flot << item->getForme(i);
+	}
+	return flot;
+}
 
 
 
