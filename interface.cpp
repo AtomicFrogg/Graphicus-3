@@ -66,7 +66,7 @@ void Interface::ajouterCarre(int x, int y, int cote) {
 }
 
 void Interface::modePileChange(bool mode) {
-
+	dessin.setPile(mode);
 }
 
 // Menu Canevas

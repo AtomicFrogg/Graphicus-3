@@ -27,3 +27,9 @@ void Cercle::setRayon(int x)
 {
 	rayon = x;
 }
+
+ostream& operator<<(ostream& flot, Cercle& C)
+{
+	flot << "C " << C.getAncrage().x << " " << C.getAncrage().y << " " << C.getRayon()<< endl;
+	return flot;
+}

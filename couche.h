@@ -13,6 +13,7 @@
 
 #include "forme.h"
 #include "vecteur.h"
+#include <iostream>
 
 using namespace std;
 
@@ -33,7 +34,7 @@ class Couche
 		// Methodes a ajouter
 		Couche();
 		~Couche();
-		void afficher(ostream &s);
+	//	void afficher(ostream &s);
 		void setEtat(int nouvelEtat);
 		int getEtat();
 		bool reinitialiserCouche();
@@ -51,19 +52,17 @@ class Couche
 		void formeSuivante();
 		void formeDerniere();
 		int getPosition();
-		template<class T>
-		friend istream& operator>>(istream& flot, Vecteur<T>& vector);
-		template<class T>
-		friend ostream& operator<<(ostream& flot, Vecteur<T>& item);
+		friend istream& operator>>(istream& flot, Couche* vector);
+		friend ostream& operator<<(ostream& flot, Couche* item);
 	private:
 		Vecteur<Forme*> formes;
 		int etat;
 		//int taille;
 };
 
-//
+
 //template<class T>
-//istream& operator>>(istream& flot, Vecteur<T>& vector)
+//istream& operator>>(istream& flot, Couche& couche)
 //{
 //	char item;
 //	flot >> item;
@@ -96,7 +95,7 @@ class Couche
 //
 //				break;
 //			}
-//			vector->ajouterElement(nouvelleCouche);
+//			couche.ajouterForme(nouvelleCouche);
 //			break;
 //
 //		case 'R':
@@ -127,13 +126,4 @@ class Couche
 //	}
 //	return flot;
 //}
-//
-//template<class T>
-//ostream& operator<<(ostream& flot, Vecteur<T>& item)
-//{
-//	for (int i = 0; i < item.getTaille(); i++)
-//	{
-//		item[i]->afficher(flot);
-//	}
-//	return flot;
-//}
+

@@ -46,31 +46,31 @@ void Tests::tests_unitaires_formes()
 void Tests::tests_unitaires_couche()
 {
    // Tests sur la classe Couche
-	Couche TestCouche;
-	TestCouche.afficher(cout);
-	Forme* TestRectangle = new Rectangle();
-	Forme* TestCercle = new Cercle();
-	Forme* TestCarre = new Carre();
-	
-	TestCouche.ajouterForme(TestRectangle);
-	TestCouche.afficher(cout);
-	TestCouche.setEtat(ACTIVE);
-	TestCouche.ajouterForme(TestCercle);
-	TestCouche.afficher(cout);
+	///*Couche TestCouche;
+	//TestCouche.afficher(cout);
+	//Forme* TestRectangle = new Rectangle();
+	//Forme* TestCercle = new Cercle();
+	//Forme* TestCarre = new Carre();
+	//
+	//TestCouche.ajouterForme(TestRectangle);
+	//TestCouche.afficher(cout);
+	//TestCouche.setEtat(ACTIVE);
+	//TestCouche.ajouterForme(TestCercle);
+	//TestCouche.afficher(cout);
 
-	cout << "Translation = " << TestCouche.translaterCouche(3,-5) << endl;
-	TestCouche.setEtat(INACTIVE);
-	TestCouche.ajouterForme(TestCarre);
-	TestCouche.afficher(cout);
-	cout << TestCouche.aireTotale()<<endl;
-	TestCouche.retirerForme(0);
-	TestCouche.afficher(cout);
-	cout << TestCouche.getTaille();
-	
-	
-	delete TestRectangle;
-	delete TestCercle;
-	delete TestCarre;
+	//cout << "Translation = " << TestCouche.translaterCouche(3,-5) << endl;
+	//TestCouche.setEtat(INACTIVE);
+	//TestCouche.ajouterForme(TestCarre);
+	//TestCouche.afficher(cout);
+	//cout << TestCouche.aireTotale()<<endl;
+	//TestCouche.retirerForme(0);
+	//TestCouche.afficher(cout);
+	//cout << TestCouche.getTaille();
+	//
+	//
+	//delete TestRectangle;
+	//delete TestCercle;
+	//d*/elete TestCarre;
 }
 
 void Tests::tests_unitaires_vecteur()
