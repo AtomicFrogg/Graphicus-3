@@ -55,14 +55,14 @@ bool Interface::ouvrirFichier(const char* fichier) {
 }
 
 bool Interface::sauvegarderFichier(const char*fichier) {
-//	ofstream myFile;
-//	myFile.open(fichier, ios_base::out);
-//	if (myFile.is_open()) 
-//	{
-//		//myFile << dessin;
-//		myFile.close();
-//		return true;
-//	}
+	ofstream myFile;
+	myFile.open(fichier, ios_base::out);
+	if (myFile.is_open()) 
+	{
+	myFile << dessin;
+	myFile.close();
+	return true;
+	}
 	return false;
 }
 
@@ -116,7 +116,7 @@ void Interface::reinitialiserCanevas() {
 void Interface::coucheAjouter() {
 	dessin.ajouterCouche();
 	ostringstream os;
-	cout << dessin;
+	os << dessin;
 	dessiner(os.str().c_str());
 }
 

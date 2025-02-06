@@ -50,11 +50,12 @@ public:
    void formeSuivante();
    void formeDerniere();
    Forme* getForme();
+   Couche* getCouche(int index);
    int getCouchePosition();
    int getFormePosition();
    void setPile(bool mode);
    Vecteur<Couche*> getVecteur();
-   friend istream& operator>>(istream& flot, const Canevas& s);
+   friend istream& operator>>(istream& flot, Canevas& s);
    friend ostream& operator<<(ostream& flot, Canevas& s);
 private:   
    Vecteur<Couche*> vecteur;

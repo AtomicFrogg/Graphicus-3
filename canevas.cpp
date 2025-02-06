@@ -207,6 +207,11 @@ Forme* Canevas::getForme() {
 	return vecteur.getElement(vecteur.getPosition())->getForme2();
 }
 
+Couche* Canevas::getCouche(int index)
+{
+	return vecteur[index];
+}
+
 int Canevas::getCouchePosition()
 {
 	return vecteur.getPosition();
@@ -228,10 +233,52 @@ Vecteur<Couche*> Canevas::getVecteur()
 }
 
 
-//istream& operator>>(istream& flot, const Canevas& s)
-//{
-//	return flot >> s.vecteur;
-//}
+istream& operator>>(istream& flot, Canevas& s)
+{
+	char item;
+	int i = -1;
+	Couche* nouvelleCouche;
+	do
+	{
+		flot >> item;
+		i = -1;
+		switch (item)
+		{
+		case 'L':
+			s.ajouterCouche();
+			i++;
+			nouvelleCouche = s.getCouche(i);
+			flot >> item;
+			switch (item)
+			{
+			case 'a':
+				nouvelleCouche->setEtat(ACTIVE);
+				break;
+
+			case 'i':
+				nouvelleCouche->setEtat(INITIALISE);
+				break;
+
+			case 'x':
+				nouvelleCouche->setEtat(INACTIVE);
+				break;
+
+			default:
+				cerr << "Erreur de lecture de l'état de la couche (CODE 18)";
+
+				break;
+			}
+			
+			break;
+
+		default:
+			flot >> s.vecteur;
+			break;
+		}
+	}
+	while (item != EOF);
+	return flot;
+}
 
 ostream& operator<<(ostream& flot, Canevas& s)
 {

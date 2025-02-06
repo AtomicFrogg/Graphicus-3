@@ -11,6 +11,9 @@
 #include <QApplication>
 #include "Interface.h"
 
+#include <sstream>
+#include <iostream>
+#include <fstream>
 using namespace std;
 
 int main(int argc, char** argv)
@@ -26,7 +29,15 @@ int main(int argc, char** argv)
 
 
 
-	//Canevas TestCanevas;
+	Canevas TestCanevas;
+	ifstream myFile;
+	myFile.open("test.txt", ios_base::in);
+	if (myFile.is_open()) 
+	{
+		myFile >> TestCanevas;
+		myFile.close();
+	}
+	cout << TestCanevas;
 	//TestCanevas.ajouterCouche();
 
 	//TestCanevas.ajouterForme(TestForme);
@@ -43,8 +54,8 @@ int main(int argc, char** argv)
 	//TestCanevas.ajouterCouche();
 	//cout << TestCanevas;
 	//Test.afficher(std::cout);
-	QApplication app(argc, argv);
+	/*QApplication app(argc, argv);
 	Interface gui("test PATATE 2.0");
-	return app.exec();
+	return app.exec();*/
 }
 
