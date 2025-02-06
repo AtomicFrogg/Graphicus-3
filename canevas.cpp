@@ -144,7 +144,7 @@ bool Canevas::translater(int deltaX, int deltaY)
 	return false;
 }
 
-void Canevas::afficher(ostream & s)
+ostream& Canevas::afficher(ostream & s)
 {
 	//cout<<"AFFICHAGE"<<endl;
 	////Vérifier s'il y a des couches
@@ -164,9 +164,9 @@ void Canevas::afficher(ostream & s)
 	//	
 	//}
 
-	s << vecteur;
+	//s << vecteur;
 
-
+	return s;
 }
 void Canevas::couchePremiere() {
 	vecteur.resetPosition();
@@ -217,7 +217,10 @@ int Canevas::getFormePosition()
 	return vecteur.getElement(vecteur.getPosition())->getPosition();
 }
 
-
+Vecteur<Couche*> Canevas::getVecteur()
+{
+	return vecteur;
+}
 
 
 

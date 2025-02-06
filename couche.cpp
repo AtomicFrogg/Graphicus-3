@@ -164,6 +164,10 @@ void Couche::afficher(ostream &s)
 	{
 		s << "erreur etat de la couche"<<endl;
 	}
+	for (int i = 0; i < getTaille(); i++)
+	{
+		//s << formes;
+	}
 }
 
 int Couche::getTaille()
@@ -189,8 +193,6 @@ int Couche::getPosition()
 {
 	return formes.getPosition();
 }
-
-
 
 
 

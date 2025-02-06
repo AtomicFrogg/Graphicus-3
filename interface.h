@@ -8,7 +8,7 @@ private:
 	Canevas dessin;
 public:
 	Interface(const char* theName = nullptr);
-	virtual bool ouvrirFichier(const char*);
+	virtual bool ouvrirFichier(const char* fichier);
 	virtual bool sauvegarderFichier(const char*);
 	virtual void coucheTranslater(int deltaX, int deltaY);
 	virtual void ajouterCercle(int x, int y, int rayon);

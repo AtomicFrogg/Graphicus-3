@@ -38,7 +38,7 @@ public:
    
    double aire();
    bool translater(int deltaX, int deltaY);
-   void afficher(ostream & s);
+   ostream& afficher(ostream & s);
 
 /// Navigation
    void couchePremiere();
@@ -52,9 +52,22 @@ public:
    Forme* getForme();
    int getCouchePosition();
    int getFormePosition();
+   Vecteur<Couche*> getVecteur();
+   friend istream& operator>>(istream& flot, const Canevas& s);
 private:   
-   Vecteur <Couche*> vecteur;
+   Vecteur<Couche*> vecteur;
    Couche* coucheActive;
    
 };
+//
+//istream& operator>>(istream& flot, const Canevas& s)
+//{
+//	return flot >> s.vecteur;
+//}
+//
+//ostream& operator<<(ostream& flot, Canevas& s)
+//{
+//	s.afficher(flot);
+//	return flot;
+//}
 

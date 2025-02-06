@@ -15,7 +15,7 @@ double Carre::aire()
 
 void Carre::afficher(ostream &s)
 {
-		s << "K" << ancrage.x << " " << ancrage.y << " " << longueur << endl;
+		s << "K " << ancrage.x << " " << ancrage.y << " " << longueur << endl;
 }
 
 int Carre::getCote()

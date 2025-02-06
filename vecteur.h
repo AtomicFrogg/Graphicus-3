@@ -160,7 +160,6 @@ T Vecteur<T>::getElement(int index) {
 		return nullptr;
 	}
 }
-
 template<class T>
 void Vecteur<T>::operator+=(T item)
 {
