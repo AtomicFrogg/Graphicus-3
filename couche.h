@@ -55,7 +55,7 @@ class Couche
 		friend istream& operator>>(istream& flot, Couche* vector);
 		friend ostream& operator<<(ostream& flot, Couche* item);
 	private:
-		Vecteur<Forme*> formes;
+		Vecteur<Forme*> *formes;
 		int etat;
 		//int taille;
 };
