@@ -59,7 +59,7 @@ bool Interface::sauvegarderFichier(const char*fichier) {
 	myFile.open(fichier, ios_base::out);
 	if (myFile.is_open()) 
 	{
-		//myFile << dessin;
+		myFile << dessin;
 		myFile.close();
 		return true;
 	}
@@ -74,7 +74,7 @@ void Interface::coucheTranslater(int deltaX, int deltaY) {
 }
 
 void Interface::ajouterCercle(int x, int y, int rayon) {
-	Forme* cercle = new Cercle(x, y, rayon);
+	Forme* cercle = new Cercle(rayon, x, y);
 	dessin.ajouterForme(cercle);
 	ostringstream os;
 	os << dessin;
@@ -82,7 +82,7 @@ void Interface::ajouterCercle(int x, int y, int rayon) {
 }
 
 void Interface::ajouterRectangle(int x, int y, int long_x, int long_y) {
-	Forme* rectangle = new Rectangle(x, y, long_x,long_y);
+	Forme* rectangle = new Rectangle(long_x, long_y, x, y);
 	dessin.ajouterForme(rectangle);
 	ostringstream os;
 	os << dessin;
@@ -90,7 +90,7 @@ void Interface::ajouterRectangle(int x, int y, int long_x, int long_y) {
 }
 
 void Interface::ajouterCarre(int x, int y, int cote) {
-	Forme* carre = new Carre(x, y, cote);
+	Forme* carre = new Carre(cote, x, y);
 	dessin.ajouterForme(carre);
 	ostringstream os;
 	os << dessin;
