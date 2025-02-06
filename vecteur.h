@@ -239,3 +239,22 @@ ostream& operator<<(ostream& flot, Vecteur<T>& vector)
 	}
 	return flot;
 }
+template<class T>
+ostream& operator<<(ostream& flot, Vecteur<T>& vector)
+{
+	if (vector.getPile())
+	{
+		for (int i = 0; i < vector.getTaille(); i++)
+		{
+			flot << vector[vector.getTaille() - i];
+		}
+	}
+	else
+	{
+		for (int i = 0; i < vector.getTaille(); i++)
+		{
+			flot << vector[i];
+		}
+	}
+	return flot;
+}
