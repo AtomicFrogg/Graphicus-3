@@ -21,20 +21,20 @@ int main(int argc, char** argv)
 	//Couche *TestCouche = new Couche();
 	//Test.ajouterElement(TestCouche);
 
-	Forme* TestForme = new Cercle();
+	//Forme* TestForme = new Cercle();
 	//Test.getElement(0)->ajouterForme(TestForme);
 
 
 
-	Canevas TestCanevas;
-	TestCanevas.ajouterCouche();
+	//Canevas TestCanevas;
+	//TestCanevas.ajouterCouche();
 
-	TestCanevas.ajouterForme(TestForme);
-	TestCanevas.ajouterCouche();
-	TestCanevas.ajouterForme(TestForme);
-	TestCanevas.activerCouche(1);
-	TestCanevas.ajouterForme(TestForme);
-	cout << TestCanevas;
+	//TestCanevas.ajouterForme(TestForme);
+	//TestCanevas.ajouterCouche();
+	//TestCanevas.ajouterForme(TestForme);
+	//TestCanevas.activerCouche(1);
+	//TestCanevas.ajouterForme(TestForme);
+	//cout << TestCanevas;
 
 	//delete TestForme;
 	//delete TestCouche;
@@ -43,8 +43,8 @@ int main(int argc, char** argv)
 	//TestCanevas.ajouterCouche();
 	//cout << TestCanevas;
 	//Test.afficher(std::cout);
-	//QApplication app(argc, argv);
-	//Interface gui("test PATATE 2.0");
-	//return app.exec();
+	QApplication app(argc, argv);
+	Interface gui("test PATATE 2.0");
+	return app.exec();
 }
 
