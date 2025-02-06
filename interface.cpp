@@ -41,28 +41,28 @@ Interface::Interface(const char* theName) : GraphicusGUI(theName)
 }*/
 
 bool Interface::ouvrirFichier(const char* fichier) {
-	ifstream myFile;
-	myFile.open(fichier, ios_base::in);
-	if (myFile.is_open()) 
-	{
-		myFile >> dessin;
-		myFile.close();
-		return true;
-	}
-	else {
+//	ifstream myFile;
+//	myFile.open(fichier, ios_base::in);
+//	if (myFile.is_open()) 
+//	{
+//		myFile >> dessin;
+//		myFile.close();
+//		return true;
+//	}
+//	else {
 		return false;
-	}
+//	}
 }
 
 bool Interface::sauvegarderFichier(const char*fichier) {
-	ofstream myFile;
-	myFile.open(fichier, ios_base::out);
-	if (myFile.is_open()) 
-	{
-		myFile << dessin;
-		myFile.close();
-		return true;
-	}
+//	ofstream myFile;
+//	myFile.open(fichier, ios_base::out);
+//	if (myFile.is_open()) 
+//	{
+//		//myFile << dessin;
+//		myFile.close();
+//		return true;
+//	}
 	return false;
 }
 
@@ -116,7 +116,7 @@ void Interface::reinitialiserCanevas() {
 void Interface::coucheAjouter() {
 	dessin.ajouterCouche();
 	ostringstream os;
-	os << dessin;
+	cout << dessin;
 	dessiner(os.str().c_str());
 }
 
