@@ -1,8 +1,8 @@
 /********
- * Fichier: graphicus-02.cpp
+ * Fichier: graphicus-03.cpp
  * Auteurs: C.-A. Brunet
  * Date: 13 juin 2024 (creation)
- * Modifie par : Olivier Picard et Jacob Beauregard-Tousignant
+ * Modifie par : Olivier Picard et William Laporte
  * Date : ...
  * Description: gestionnaire de tests pour l'application Graphicus. Ce
  *    fichier fait partie de la distribution de Graphicus.
@@ -54,8 +54,14 @@ int main(int argc, char** argv)
 	//TestCanevas.ajouterCouche();
 	//cout << TestCanevas;
 	//Test.afficher(std::cout);
+<<<<<<< HEAD
 	/*QApplication app(argc, argv);
 	Interface gui("test PATATE 2.0");
 	return app.exec();*/
+=======
+	QApplication app(argc, argv);
+	Interface gui("Graphicus-3");
+	return app.exec();
+>>>>>>> origin/main
 }
 

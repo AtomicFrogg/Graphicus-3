@@ -2,7 +2,7 @@
  * Fichier: tests.cpp
  * Auteurs: C.-A. Brunet
  * Date: 13 juin 2024 (creation)
- * Modifie par : Olivier Picard et Jacob Beauregard-Tousignant
+ * Modifie par : Olivier Picard et William Laporte
  * Date : ...
  * Description: Implementation des methodes des classes decrites dans
  *    tests.h.  Ce fichier peut etre adapte a vos besoins de tests. 

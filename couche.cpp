@@ -15,14 +15,14 @@
 Couche::Couche()
 {
 	//this->formes = new Forme*[MAX_FORMES];
-	this->formes = *new Vecteur<Forme*>();
+	this->formes = new Vecteur<Forme*>();
 	this->etat = INITIALISE;
 	//this->taille = 0;
 }
 
 Couche::~Couche()
 {
-	//delete formes;
+	delete formes;
 }
 
 void Couche::setEtat(int nouvelEtat)
@@ -51,7 +51,7 @@ bool Couche::reinitialiserCouche()
 		delete formes;
 		formes = formes2;
 		taille = 0;*/
-		formes.viderVecteur();
+		formes->viderVecteur();
 		return SUCCES;
 	}
 }
@@ -60,9 +60,9 @@ double Couche::aireTotale()
 {
 	double aire = 0;
 	Forme* ptr = nullptr;
-	for(int i = 0; i<formes.getTaille()/*taille*/;i++)
+	for(int i = 0; i<formes->getTaille()/*taille*/;i++)
 	{
-		ptr = formes.getElement(i);
+		ptr = formes->getElement(i);
 		aire = aire + ptr->aire();
 	}
 	return aire;
@@ -70,11 +70,11 @@ double Couche::aireTotale()
 
 bool Couche::ajouterForme(Forme* ptr)
 {
-	if(formes.getTaille()/*taille*/ < MAX_FORMES)
+	if(formes->getTaille()/*taille*/ < MAX_FORMES)
 	{
 		//formes[taille] = ptr;
 		//taille++;
-		formes.ajouterElement(ptr);
+		formes->ajouterElement(ptr);
 		return SUCCES;
 	}
 	return FAIL;
@@ -82,9 +82,9 @@ bool Couche::ajouterForme(Forme* ptr)
 
 Forme* Couche::retirerForme(int index)
 {
-	if(index >= 0 && index < formes.getTaille()/*taille*/)
+	if(index >= 0 && index < formes->getTaille()/*taille*/)
 	{
-		Forme* ptr = formes.retirerElement(index);
+		Forme* ptr = formes->retirerElement(index);
 		/*Forme* ptr = formes[index];
 		for(int i = index; i< taille - 1; i++)
 		{
@@ -101,9 +101,9 @@ Forme* Couche::retirerForme(int index)
 
 Forme* Couche::getForme(int index)
 {
-	if(index >= 0 && index < formes.getTaille()/*taille*/)
+	if(index >= 0 && index < formes->getTaille()/*taille*/)
 	{
-		return formes.getElement(index)/*formes[index]*/;
+		return formes->getElement(index)/*formes[index]*/;
 	}
 	else
 	{
@@ -111,7 +111,7 @@ Forme* Couche::getForme(int index)
 	}
 }
 Forme* Couche::getForme2() {
-	return formes.getElement(formes.getPosition());
+	return formes->getElement(formes->getPosition());
 }
 
 bool Couche::translaterCouche(int deltaX, int deltaY)
@@ -119,10 +119,10 @@ bool Couche::translaterCouche(int deltaX, int deltaY)
 	if(deltaX != 0 && deltaY != 0)
 	{
 		Forme* it = nullptr;
-		for(int i = 0; i < formes.getTaille()/*taille*/; i++)
+		for(int i = 0; i < formes->getTaille()/*taille*/; i++)
 		{
 			/*formes[i]->translater(deltaX, deltaY);*/
-			it = formes.getElement(i);
+			it = formes->getElement(i);
 			it->translater(deltaX, deltaY);
 		}
 		return SUCCES;
@@ -172,11 +172,11 @@ bool Couche::translaterCouche(int deltaX, int deltaY)
 
 int Couche::getTaille()
 {
-	return formes.getTaille()/*taille*/;
+	return formes->getTaille()/*taille*/;
 }
 
 void Couche::formePremiere() {
-	formes.resetPosition();
+	formes->resetPosition();
 }
 
 void Couche::formePrecedente() {
@@ -186,12 +186,12 @@ void Couche::formeSuivante() {
 	++formes;
 }
 void Couche::formeDerniere() {
-	formes.maxPosition();
+	formes->maxPosition();
 }
 
 int Couche::getPosition()
 {
-	return formes.getPosition();
+	return formes->getPosition();
 }
 
 

@@ -41,17 +41,17 @@ Interface::Interface(const char* theName) : GraphicusGUI(theName)
 }*/
 
 bool Interface::ouvrirFichier(const char* fichier) {
-//	ifstream myFile;
-//	myFile.open(fichier, ios_base::in);
-//	if (myFile.is_open()) 
-//	{
-//		myFile >> dessin;
-//		myFile.close();
-//		return true;
-//	}
-//	else {
+	///*ifstream myFile;*/
+	///*myFile.open(fichier, ios_base::in);*/
+	//if (/*myFile.is_open()*/) 
+	//{
+	//	//myFile >> dessin;
+	//	//myFile.close();
+	//	return true;
+	//}
+	//else {
 		return false;
-//	}
+	//}
 }
 
 bool Interface::sauvegarderFichier(const char*fichier) {
@@ -82,7 +82,7 @@ void Interface::ajouterCercle(int x, int y, int rayon) {
 }
 
 void Interface::ajouterRectangle(int x, int y, int long_x, int long_y) {
-	Forme* rectangle = new Rectangle(long_x, long_y, x, y);
+	Forme* rectangle = new Rectangle(long_y, long_x, x, y);
 	dessin.ajouterForme(rectangle);
 	ostringstream os;
 	os << dessin;
@@ -131,6 +131,9 @@ void Interface::retirerForme() {
 	Forme* it = dessin.getForme();
 	dessin.retirerForme(dessin.getFormePosition());
 	delete it;
+	ostringstream os;
+	os << dessin;
+	dessiner(os.str().c_str());
 }
 
 // Menu navigation
