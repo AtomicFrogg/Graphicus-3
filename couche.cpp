@@ -228,7 +228,7 @@ istream& operator>>(istream& flot, Couche* couche)
 	Forme* nouvelleForme;
 	do
 	{
-		
+
 		switch (item)
 		{
 		case 'R':
@@ -263,6 +263,7 @@ istream& operator>>(istream& flot, Couche* couche)
 	} while (item != EOF);
 	return flot;
 }
+
 
 
 
