@@ -224,7 +224,6 @@ istream& operator>>(istream& flot, Couche* couche)
 {
 	char item;
 	int x, y;
-	string nombre;
 	Forme* nouvelleForme;
 	do
 	{

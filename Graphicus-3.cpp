@@ -54,14 +54,8 @@ int main(int argc, char** argv)
 	//TestCanevas.ajouterCouche();
 	//cout << TestCanevas;
 	//Test.afficher(std::cout);
-<<<<<<< HEAD
 	/*QApplication app(argc, argv);
 	Interface gui("test PATATE 2.0");
 	return app.exec();*/
-=======
-	QApplication app(argc, argv);
-	Interface gui("Graphicus-3");
-	return app.exec();
->>>>>>> origin/main
 }
 
