@@ -24,6 +24,7 @@ public:
   void setAncrage(Coordonnee c);
   virtual double aire() = 0;
   virtual void afficher(ostream & s) = 0;
+  friend ostream& operator<<(ostream& flot, Forme* X);
 protected:
   Coordonnee ancrage;
 };

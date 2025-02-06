@@ -52,8 +52,8 @@ void Rectangle::afficher(ostream &s)
 	s << "R " << ancrage.x << " " << ancrage.y << " " << longueur << " " << hauteur << endl;
 }
 
-ostream& operator<<(ostream& flot, Rectangle& R)
-{
-	flot << "R " << R.getAncrage().x << " " << R.getAncrage().y << " " << R.getLongueur() << " " << R.getHauteur() << endl;
-	return flot;
-}
+//ostream& operator<<(ostream& flot, Forme* X)
+//{
+//	flot << "X " << X->getAncrage().x << " " << X->getAncrage().y << " " << X->getLongueur() << " " << X->getHauteur() << endl;
+//	return flot;
+//}

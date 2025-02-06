@@ -45,6 +45,7 @@ Vecteur<T>::Vecteur() {
 	taille = 0;
 	position = 0;
 	elements = new T[capacite];
+	pile = false;
 }
 
 
@@ -220,7 +221,7 @@ void Vecteur<T>::maxPosition() {
 }
 
 template<class T>
-ostream& operator<<(ostream& flot, Vecteur<T> vector)
+ostream& operator<<(ostream& flot, Vecteur<T>& vector)
 {
 	if (vector.getPile())
 	{
